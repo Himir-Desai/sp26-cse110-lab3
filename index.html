@@ -27,18 +27,20 @@
       <nav>
         <h2>Agenda/Outline</h2>
         <ul>
-          <li><a>Standup Meeting</a></li>
-          <li><a>Team Roles and Responsibilities</a></li>
-          <li><a>Project Timeline and Milestones</a></li>
-          <li><a>Communication Plan</a></li>
-          <li><a>Technical Discussion</a></li>
-          <li><a>Team Photo</a></li>
-          <li><a>Team Bonding Video</a></li>
+          <li><a href="#StandupMeeting">Standup Meeting</a></li>
+          <li><a href="#TeamRoles">Team Roles and Responsibilities</a></li>
+          <li><a href="#ProjectTimeline">Project Timeline and Milestones</a></li>
+          <li><a href="#CommunicationPlan">Communication Plan</a></li>
+          <li><a href="#TechnicalDiscussion">Technical Discussion</a></li>
+          <li><a href="#TeamPhoto">Team Photo</a></li>
+          <li><a href="#TeamBondingVideo">Team Bonding Video</a></li>
+          <li><a href="#TeamChant">Team Chant</a></li>
+          <li><a href="#Feedback">Feedback and Suggestions</a></li>
         </ul>
       </nav>
 
       <br />
-      <section>
+      <section id="StandupMeeting">
         <h2>Standup Meeting</h2>
         <div>
           <p>
@@ -62,7 +64,7 @@
       </section>
 
       <br />
-      <section>
+      <section id="TeamRoles">
         <h2>Team Roles and Responsibilities</h2>
         <p>
           We discussed about the team roles and responsibilities.
@@ -75,7 +77,7 @@
       </section>
 
       <br />
-      <section>
+      <section id="ProjectTimeline">
         <h2>Project Timeline and Milestones</h2>
         <div>
           <p>
@@ -94,7 +96,7 @@
         </div>
       </section>
 
-      <section>
+      <section id="CommunicationPlan">
         <h2>Communication Plan</h2>
         <p>
           We discussed about the communication plan.
@@ -108,7 +110,7 @@
       </section>
 
       <br />
-      <section>
+      <section id="TechnicalDiscussion">
         <h2>Technical Discussion</h2>
         <div>
           <p>
@@ -138,7 +140,7 @@
 
       <hr />
 
-      <section>
+      <section id="TeamPhoto">
         <h2>Team Photo</h2>
         <img
           src="public/images/team.jpg"
@@ -149,7 +151,7 @@
       </section>
 
       <br />
-      <section>
+      <section id="TeamBondingVideo">
         <h2>Team Bonding Video</h2>
         <video width="500" controls>
           <source src="public/videos/bonding.mp4" type="video/mp4" />
@@ -157,7 +159,7 @@
       </section>
 
       <br />
-      <section>
+      <section id="TeamChant">
         <h2>Team Chant</h2>
         <audio controls src="public/audio/team-chant.mp3"></audio>
       </section>
@@ -165,19 +167,20 @@
       <hr />
 
       <br />
-      <section>
+      <section id="Feedback">
         <h2>Feedback and Suggestions</h2>
         <form>
           <div>
-            <input type="text" name="Name" placeholder="Your Name" required />
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="Name" placeholder="Your Name" required />
           </div>
           <div>
-            <span>Date of Birth:</span>
-            <input type="date" name="DateOfBirth" required />
+            <label for="dateOfBirth">Date of Birth:</label>
+            <input type="date" id="dateOfBirth" name="DateOfBirth" required />
           </div>
           <div>
-            <span>First time working in team?:</span>
-            <input type="checkbox" name="FirstTime" />
+            <label for="firstTime">First time working in team?:</label>
+            <input type="checkbox" id="firstTime" name="FirstTime" />
           </div>
           <fieldset>
             <legend>Rate the Meeting</legend>
@@ -199,8 +202,10 @@
           </fieldset>
 
           <div>
+            <label for="logo-vote">Vote for the logo:</label>
             <input
               list="logo-vote"
+              id="logo-vote"
               name="LogoVote"
               placeholder="Vote for the logo"
               required
@@ -213,7 +218,8 @@
           </div>
 
           <div>
-            <select name="FavoriteColor" required>
+            <label for="FavoriteColor">Choose your favorite color:</label>
+            <select id="FavoriteColor" name="FavoriteColor" required>
               <option value="" disabled selected>
                 Choose your favorite color
               </option>
@@ -224,7 +230,9 @@
           </div>
 
           <div>
+            <label for="Feedback">Your Feedback and Suggestions:</label>
             <textarea
+              id="Feedback"
               placeholder="Your Feedback and Suggestions"
               name="Feedback"
               required
