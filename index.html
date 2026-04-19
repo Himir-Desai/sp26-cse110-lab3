@@ -8,28 +8,30 @@
   </head>
   <body>
     <header>
-      <h1>CSE 110 Kickoff Meeting Group ABC</h1>
+      <h1 id="HeaderText">CSE 110 Kickoff Meeting Group ABC</h1>
     </header>
     <main>
       <h2>Date: April 9 2026</h2>
       <br />
-      <section>
+      <section id="Attendance">
         <h2>Attendance</h2>
-        <h3>Present</h3>
-        <span>Himir Desai,</span>
-        <span>John Doe,</span>
-        <span>Jane Smith</span>
-        <h3>Absent</h3>
-        <span>Emily Davis</span>
+        <h3 class="attendanceLabel">Present</h3>
+        <span class="attendees">Himir Desai,</span>
+        <span class="attendees">John Doe,</span>
+        <span class="attendees">Jane Smith</span>
+        <h3 class="attendanceLabel">Absent</h3>
+        <span class="attendees">Emily Davis</span>
       </section>
 
       <br />
       <nav>
         <h2>Agenda/Outline</h2>
-        <ul>
+        <ul id="AgendaList">
           <li><a href="#StandupMeeting">Standup Meeting</a></li>
           <li><a href="#TeamRoles">Team Roles and Responsibilities</a></li>
-          <li><a href="#ProjectTimeline">Project Timeline and Milestones</a></li>
+          <li>
+            <a href="#ProjectTimeline">Project Timeline and Milestones</a>
+          </li>
           <li><a href="#CommunicationPlan">Communication Plan</a></li>
           <li><a href="#TechnicalDiscussion">Technical Discussion</a></li>
           <li><a href="#TeamPhoto">Team Photo</a></li>
@@ -42,8 +44,8 @@
       <br />
       <section id="StandupMeeting">
         <h2>Standup Meeting</h2>
-        <div>
-          <p>
+        <div class="notesDiv">
+          <p class="notes">
             We discussed when everyone is available every week for a standup
             meeting.
             <em
@@ -51,11 +53,11 @@
               <strong>10 AM on Mondays.</strong></em
             >
           </p>
-          <p>
+          <p class="notes">
             We also discussed about what will happen in a standup meeting and
             the decided structure is below:
           </p>
-          <ul>
+          <ul class="notesList">
             <li>What did you do last week?</li>
             <li>What will you do this week?</li>
             <li>Do you have any blockers?</li>
@@ -66,7 +68,7 @@
       <br />
       <section id="TeamRoles">
         <h2>Team Roles and Responsibilities</h2>
-        <p>
+        <p class="notes">
           We discussed about the team roles and responsibilities.
           <em
             >We decided that <b>Himir</b> will be the project manager,
@@ -79,13 +81,13 @@
       <br />
       <section id="ProjectTimeline">
         <h2>Project Timeline and Milestones</h2>
-        <div>
-          <p>
+        <div class="notesDiv">
+          <p class="notes">
             We discussed about the project timeline and milestones. We decided
             that the project will be completed in 10 weeks. The milestones are
             below:
           </p>
-          <ol>
+          <ol class="notesList">
             <li><b>Week 1:</b> Project kickoff and requirements gathering</li>
             <li><b>Week 2-3:</b> Design and architecture</li>
             <li><b>Week 4-6:</b> Development</li>
@@ -98,7 +100,7 @@
 
       <section id="CommunicationPlan">
         <h2>Communication Plan</h2>
-        <p>
+        <p class="notes">
           We discussed about the communication plan.
           <em
             >We decided that we will use Slack for daily communication and Zoom
@@ -112,15 +114,15 @@
       <br />
       <section id="TechnicalDiscussion">
         <h2>Technical Discussion</h2>
-        <div>
-          <p>
+        <div class="notesDiv">
+          <p class="notes">
             We had a technical discussion about the tools and technologies we
             will use for the project. We decided to use <i>React</i> for the
             frontend, <i>Node.js</i> for the backend, and <i>MongoDB</i> for the
             database. We also discussed about the development environment and
             agreed to use <i>Visual Studio Code</i> as our code editor.
           </p>
-          <p>
+          <p class="notes">
             <em
               >We also agreed that everyone will follow the coding standards and
               best practices for their respective roles. We will also have code
@@ -128,7 +130,7 @@
               project.</em
             >
           </p>
-          <p>
+          <p class="notes">
             We also created our git organization and repository for this
             project.
             <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">
@@ -143,6 +145,7 @@
       <section id="TeamPhoto">
         <h2>Team Photo</h2>
         <img
+          id="TeamPhotoImage"
           src="public/images/team.jpg"
           alt="Team Photo"
           width="500"
@@ -153,7 +156,7 @@
       <br />
       <section id="TeamBondingVideo">
         <h2>Team Bonding Video</h2>
-        <video width="500" controls>
+        <video width="500" controls id="TeamVideo">
           <source src="public/videos/bonding.mp4" type="video/mp4" />
         </video>
       </section>
@@ -169,40 +172,38 @@
       <br />
       <section id="Feedback">
         <h2>Feedback and Suggestions</h2>
-        <form>
-          <div>
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="Name" placeholder="Your Name" required />
+        <form id="FeedbackForm">
+          <div class="inputDiv">
+            <label class="formLabel" for="name">Your Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="Name"
+              placeholder="Your Name"
+              required
+            />
           </div>
-          <div>
-            <label for="dateOfBirth">Date of Birth:</label>
+          <div class="inputDiv">
+            <label class="formLabel" for="dateOfBirth">Date of Birth:</label>
             <input type="date" id="dateOfBirth" name="DateOfBirth" required />
           </div>
-          <div>
-            <label for="firstTime">First time working in team?:</label>
+          <div class="inputDiv">
+            <label class="formLabel" for="firstTime"
+              >First time working in team?:</label
+            >
             <input type="checkbox" id="firstTime" name="FirstTime" />
           </div>
           <fieldset>
-            <legend>Rate the Meeting</legend>
-            <label>
-              <input type="radio" name="rating" value="1" required /> 1
-            </label>
-            <label>
-              <input type="radio" name="rating" value="2" required /> 2
-            </label>
-            <label>
-              <input type="radio" name="rating" value="3" required /> 3
-            </label>
-            <label>
-              <input type="radio" name="rating" value="4" required /> 4
-            </label>
-            <label>
-              <input type="radio" name="rating" value="5" required /> 5
-            </label>
+            <legend class="formLabel">Rate the Meeting</legend>
+            <input type="radio" name="rating" value="1" required /> 1
+            <input type="radio" name="rating" value="2" required /> 2
+            <input type="radio" name="rating" value="3" required /> 3
+            <input type="radio" name="rating" value="4" required /> 4
+            <input type="radio" name="rating" value="5" required /> 5
           </fieldset>
 
-          <div>
-            <label for="logo-vote">Vote for the logo:</label>
+          <div class="inputDiv">
+            <label class="formLabel" for="logo-vote">Vote for the logo:</label>
             <input
               list="logo-vote"
               id="logo-vote"
@@ -217,8 +218,10 @@
             </datalist>
           </div>
 
-          <div>
-            <label for="FavoriteColor">Choose your favorite color:</label>
+          <div class="inputDiv">
+            <label class="formLabel" for="FavoriteColor"
+              >Choose your favorite color:</label
+            >
             <select id="FavoriteColor" name="FavoriteColor" required>
               <option value="" disabled selected>
                 Choose your favorite color
@@ -229,8 +232,10 @@
             </select>
           </div>
 
-          <div>
-            <label for="Feedback">Your Feedback and Suggestions:</label>
+          <div class="inputDiv">
+            <label class="formLabel" for="Feedback"
+              >Your Feedback and Suggestions:</label
+            >
             <textarea
               id="Feedback"
               placeholder="Your Feedback and Suggestions"
@@ -246,7 +251,7 @@
       <br />
       <details>
         <summary>Next Meeting Information</summary>
-        <p>
+        <p class="notes">
           The next meeting will be held on April 20, 2026 at 10 AM. We will
           discuss about the project requirements and start working on the design
           and architecture of the project.
