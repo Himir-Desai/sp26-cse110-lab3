@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="public/images/favicon.ico" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
     <title>CSE 110 Kickoff Meeting Group ABC</title>
   </head>
   <body>
@@ -13,14 +21,14 @@
     <main>
       <h2>Date: April 9 2026</h2>
       <br />
+      <h2>Attendance</h2>
       <section id="Attendance">
-        <h2>Attendance</h2>
         <h3 class="attendanceLabel">Present</h3>
-        <span class="attendees">Himir Desai,</span>
-        <span class="attendees">John Doe,</span>
-        <span class="attendees">Jane Smith</span>
+        <span>Himir Desai</span>
+        <span>John Doe</span>
+        <span>Jane Smith</span>
         <h3 class="attendanceLabel">Absent</h3>
-        <span class="attendees">Emily Davis</span>
+        <span>Emily Davis</span>
       </section>
 
       <br />
@@ -57,7 +65,7 @@
             We also discussed about what will happen in a standup meeting and
             the decided structure is below:
           </p>
-          <ul class="notesList">
+          <ul class="notes">
             <li>What did you do last week?</li>
             <li>What will you do this week?</li>
             <li>Do you have any blockers?</li>
@@ -87,7 +95,7 @@
             that the project will be completed in 10 weeks. The milestones are
             below:
           </p>
-          <ol class="notesList">
+          <ol class="notes">
             <li><b>Week 1:</b> Project kickoff and requirements gathering</li>
             <li><b>Week 2-3:</b> Design and architecture</li>
             <li><b>Week 4-6:</b> Development</li>
@@ -98,6 +106,7 @@
         </div>
       </section>
 
+      <br />
       <section id="CommunicationPlan">
         <h2>Communication Plan</h2>
         <p class="notes">
@@ -142,23 +151,18 @@
 
       <hr />
 
-      <section id="TeamPhoto">
-        <h2>Team Photo</h2>
-        <img
-          id="TeamPhotoImage"
-          src="public/images/team.jpg"
-          alt="Team Photo"
-          width="500"
-          height="300"
-        />
-      </section>
+      <section id="TeamMedia">
+        <div id="TeamPhoto">
+          <h2>Team Photo</h2>
+          <img src="public/images/team.jpg" alt="Team Photo" />
+        </div>
 
-      <br />
-      <section id="TeamBondingVideo">
-        <h2>Team Bonding Video</h2>
-        <video width="500" controls id="TeamVideo">
-          <source src="public/videos/bonding.mp4" type="video/mp4" />
-        </video>
+        <div id="TeamBondingVideo">
+          <h2>Team Bonding Video</h2>
+          <video controls>
+            <source src="public/videos/bonding.mp4" type="video/mp4" />
+          </video>
+        </div>
       </section>
 
       <br />
@@ -194,7 +198,7 @@
             <input type="checkbox" id="firstTime" name="FirstTime" />
           </div>
           <fieldset>
-            <legend class="formLabel">Rate the Meeting</legend>
+            <legend>Rate the Meeting</legend>
             <input type="radio" name="rating" value="1" required /> 1
             <input type="radio" name="rating" value="2" required /> 2
             <input type="radio" name="rating" value="3" required /> 3
